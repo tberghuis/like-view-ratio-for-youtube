@@ -1,26 +1,38 @@
-// element = document.querySelector(selectors);
+console.log("hello content");
 
-console.log("hello content fdsfsd");
+var interval = setInterval(function () {
+  // console.log("now", Date.now());
+  if (document.querySelector("#top-level-buttons-computed #text")) {
+    clearInterval(interval);
+    getLikes();
+  }
+}, 500);
 
-createButton();
+document.addEventListener("yt-navigate-finish", function (event) {
+  console.log("yt-navigate-finish");
+  setTimeout(getLikes, 500);
+  // getLikes();
+});
+
+// createButton();
 
 /////////////////////////////// fns ////////////////////
 
-function createButton() {
-  var button = document.createElement("button");
+// function createButton() {
+//   var button = document.createElement("button");
 
-  button.setAttribute("id", "lvrfy-button");
-  button.innerHTML = "Press me";
-  button.style.zIndex = 10000;
-  button.style.position = "fixed";
+//   button.setAttribute("id", "lvrfy-button");
+//   button.innerHTML = "Press me";
+//   button.style.zIndex = 10000;
+//   button.style.position = "fixed";
 
-  button.onclick = getLikes;
-  // button.onclick = insertRatio;
+//   button.onclick = getLikes;
 
-  document.body.append(button);
-}
+//   document.body.append(button);
+// }
 
 function getLikes() {
+  console.log("get likes");
   var likesText = document.querySelector("#top-level-buttons-computed #text");
   var likes = likesText.ariaLabel.replace(/\D/g, "");
 
