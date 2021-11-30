@@ -6,11 +6,16 @@ var interval = setInterval(function () {
     clearInterval(interval);
     getLikes();
   }
-}, 500);
+}, 300);
 
 document.addEventListener("yt-navigate-finish", function (event) {
   console.log("yt-navigate-finish");
-  setTimeout(getLikes, 500);
+  setTimeout(() => {
+    if (document.querySelector("#lvrfy-ratio")) {
+      return;
+    }
+    getLikes();
+  }, 500);
   // getLikes();
 });
 
@@ -52,10 +57,12 @@ function insertRatio(ratio) {
 
   var ratioDisplay = document.createElement("div");
   ratioDisplay.innerHTML = `L/V ${ratio}&#37;`;
+  ratioDisplay.id = "lvrfy-ratio";
   ratioDisplay.style.fontSize = "14px";
   ratioDisplay.style.fontWeight = 500;
   ratioDisplay.style.height = "40px";
   ratioDisplay.style.lineHeight = "40px";
 
-  container.insertBefore(ratioDisplay, container.firstChild);
+  // container.insertBefore(ratioDisplay, container.firstChild);
+  container.insertBefore(ratioDisplay, container.children[2]);
 }
