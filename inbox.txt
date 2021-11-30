@@ -1,0 +1,5 @@
+manifest v2 for dev so i get hot-reload
+
+make unpacked-dev folder
+
+run at document end

@@ -1,0 +1,15 @@
+{
+  "name": "Like view ratio for Youtube",
+  "version": "0.0.1",
+
+  "manifest_version": 2,
+
+  "background": { "scripts": ["hot-reload.js"] },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
