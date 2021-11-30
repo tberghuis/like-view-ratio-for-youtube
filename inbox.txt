@@ -2,8 +2,9 @@
 run at document end
 
 icons
-build scripts
+build script, bash wsl
   override manifest with v3, no reload script
+  manifest version as argument, sed
 github
 release
 reddit
