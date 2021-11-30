@@ -1,10 +1,9 @@
-manifest v2 for dev so i get hot-reload
-
-make unpacked-dev folder
 
 run at document end
 
-
-next task get aria-label
-convert to number... strip non numeric chars
-
+icons
+build scripts
+  override manifest with v3, no reload script
+github
+release
+reddit
