@@ -13,7 +13,9 @@ function createButton() {
   button.innerHTML = "Press me";
   button.style.zIndex = 10000;
   button.style.position = "fixed";
+
   button.onclick = getLikes;
+  // button.onclick = insertRatio;
 
   document.body.append(button);
 }
@@ -37,4 +39,25 @@ function getLikes() {
   ratio = Number.parseFloat(ratio).toPrecision(3);
   console.log("~ ratio", ratio);
 
+  insertRatio(ratio);
+}
+
+function insertRatio(ratio) {
+  // #info #top-level-buttons-computed.ytd-menu-renderer
+
+  var container = document.querySelector(
+    "#info #top-level-buttons-computed.ytd-menu-renderer"
+  );
+
+  var ratioDisplay = document.createElement("div");
+
+  ratioDisplay.innerHTML = `L/V ${ratio}&#37;`;
+  ratioDisplay.style.fontSize = "14px";
+  ratioDisplay.style.fontWeight = 500;
+  ratioDisplay.style.height = "40px";
+  ratioDisplay.style.lineHeight = "40px";
+
+  // eElement.insertBefore(newFirstElement, eElement.firstChild);
+
+  container.insertBefore(ratioDisplay, container.firstChild);
 }
