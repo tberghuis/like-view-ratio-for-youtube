@@ -11,3 +11,5 @@ build script, bash wsl
   manifest version as argument, sed
 release
 reddit
+
+icon as thumbs up emoji
