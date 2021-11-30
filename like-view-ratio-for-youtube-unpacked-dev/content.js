@@ -22,4 +22,19 @@ function getLikes() {
   console.log("test fn");
   var text = document.querySelector("#top-level-buttons-computed #text");
   console.log("text", text);
+
+  // var label = text.ariaLabel;
+  var likes = text.ariaLabel.replace(/\D/g, "");
+  console.log("~ likes", likes);
+
+  // var views = document.querySelector("ytd-video-view-count-renderer .view-count");
+  var views = document.querySelector(".view-count");
+
+  views = views.textContent.replace(/\D/g, "");
+  console.log("~ views", views);
+
+  var ratio = (likes / views) * 100;
+  ratio = Number.parseFloat(ratio).toPrecision(3);
+  console.log("~ ratio", ratio);
+
 }

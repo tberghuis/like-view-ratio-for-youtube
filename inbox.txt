@@ -3,3 +3,8 @@ manifest v2 for dev so i get hot-reload
 make unpacked-dev folder
 
 run at document end
+
+
+next task get aria-label
+convert to number... strip non numeric chars
+
