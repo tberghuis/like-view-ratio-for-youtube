@@ -1,7 +1,11 @@
 
 run at document end
 
-icons
+store listing, 
+  screenshot
+  description
+
+
 build script, bash wsl
   override manifest with v3, no reload script
   manifest version as argument, sed
